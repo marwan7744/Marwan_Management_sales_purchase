@@ -103,7 +103,6 @@ BL تستخدم DAL للوصول للبيانات
 
 💻 التقنيات المستخدمة
 <p> <img alt=".NET" src="https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img alt="C#" src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" /> <img alt="SQL Server" src="https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" /> </p>
-لا اريد شرح اكثر اريد تشرح اقل BL      اريد شرحRPT التقرير وملف DAL  ملف الاتصال بقاعدة البيانات
 نظام إدارة المبيعات والمشتريات - Marwan Management
 📂 طبقة BL (Business Logic Layer)
 تحتوي على الكلاسات الأساسية للنظام:
