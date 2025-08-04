@@ -1,47 +1,115 @@
-نظام إدارة المبيعات والمشتريات - Marwan Management
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> مرحباً! أنا مروان</h1><p>مرحباً بكم في صفحة نظام إدارة المبيعات والمشتريات! </br> أنا <b>مروان</b>،مطور نظم إدارة <img src="https://cdn-icons-png.flaticon.com/512/197/197551.png" width="13"/> <b>الجمهورية اليمنية</b>. </p>
-🏗️
-يعتمد النظام على التصميم متعدد الطبقات (Multi-Layer Architecture) لتنظيم الكود وتسهيل الصيانة والتوسعة:
+# نظام إدارة المبيعات والمشتريات - Marwan Management
 
-🔹 DAL (Data Access Layer)
-طبقة الوصول إلى البيانات والتعامل مع قواعد البيانات
+<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> مرحباً! أنا مروان</h1>
 
-🔹 BL (Business Logic Layer)
-طبقة منطق الأعمال وقواعد العمل الخاصة بالنظام
+<p>مرحباً بكم في صفحة نظام إدارة المبيعات والمشتريات! </br> أنا <b>مروان</b>، مطور نظم إدارة من <b>الجمهورية اليمنية</b>. </p>
 
-🔹 Models
-تحتوي على الكائنات والكيانات، وتُستخدم لنقل البيانات بين الطبقات
+## 🏗️ بنية النظام المعمارية
+يعتمد النظام على **التصميم متعدد الطبقات** (Multi-Layer Architecture):
 
-🔹 PL (Presentation Layer)
-طبقة العرض، وهي الواجهة الرسومية التي يتفاعل معها المستخدم
+🔹 **DAL (Data Access Layer)**  
+طبقة الوصول إلى البيانات
 
-🔹 RPT (Reports)
-مخصصة لتصميم وعرض التقارير المختلفة داخل النظام
+🔹 **BL (Business Logic Layer)**  
+طبقة منطق الأعمال (سأشرحها بالتفصيل أدناه)
 
-📜 خلفية المشروع
-تسعى المؤسسات إلى تحسين عمليات البيع لمواكبة التنافس في السوق، ولهذا يعد نظام إدارة المبيعات أداة أساسية لتنظيم وتطوير الأداء البيعي.
+🔹 **Models**  
+تحتوي على الكائنات والكيانات
 
-يساعد النظام في:
+🔹 **PL (Presentation Layer)**  
+الواجهة الرسومية
 
-تتبع الطلبات والعملاء
+🔹 **RPT (Reports)**  
+نظام التقارير
 
-مراقبة المخزون بشكل دقيق
+## 📂 شرح طبقة BL (Business Logic Layer)
 
-إصدار الفواتير وإدارة المدفوعات
+تحتوي طبقة منطق الأعمال على الكلاسات الرئيسية التالية:
 
-تحليل البيانات واتخاذ القرارات
+### 1. SalesManager.cs
+```csharp
+public class SalesManager {
+    public void CreateInvoice(Invoice invoice) {
+        // منطق إنشاء الفاتورة
+    }
+    
+    public List<Invoice> GetCustomerInvoices(int customerId) {
+        // استرجاع فواتير العميل
+    }
+    
+    public decimal CalculateTotalSales(DateTime from, DateTime to) {
+        // حساب إجمالي المبيعات
+    }
+}
+```
 
-يهدف المشروع إلى تصميم نظام مرن وذكي يربط المبيعات بالمخزون، ويقلل من الأخطاء، ويعزز كفاءة العمل.
+### 2. InventoryManager.cs
+```csharp
+public class InventoryManager {
+    public void UpdateStock(Product product, int quantity) {
+        // تحديث كمية المنتج
+    }
+    
+    public List<Product> GetLowStockProducts() {
+        // استرجاع المنتجات قليلة الكمية
+    }
+    
+    public void ReceivePurchaseOrder(PurchaseOrder order) {
+        // استلام طلب شراء
+    }
+}
+```
 
-💻 التقنيات المستخدمة
-<p> <img alt=".NET" src="https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img alt="C#" src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" /> <img alt="SQL Server" src="https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" /> <img alt="Crystal Reports" src="https://img.shields.io/badge/-Crystal%20Reports-0096D6?style=flat-square&logo=crystal-reports&logoColor=white" /> <img alt="Visual Studio" src="https://img.shields.io/badge/-Visual%20Studio-5C2D91?style=flat-square&logo=visual-studio&logoColor=white" /> <img alt="UML" src="https://img.shields.io/badge/-UML-FF6F00?style=flat-square&logo=uml&logoColor=white" /> </p>
-✨ مميزات النظام
-<ul> <li>واجهة مستخدم سهلة وبديهية</li> <li>إدارة متكاملة للعملاء والموردين</li> <li>نظام فواتير متكامل مع تتبع للمدفوعات</li> <li>تقارير مبيعات ومشتريات مفصلة</li> <li>إدارة المخزون والمنتجات</li> <li>تحليل بيانات المبيعات</li> <li>نظام صلاحيات متعدد المستويات</li> </ul>
-📸 لقطات من النظام
-<p> <img width="300" src="https://via.placeholder.com/300x200?text=واجهة+المبيعات" /> <img width="300" src="https://via.placeholder.com/300x200?text=شاشة+الفواتير" /> <img width="300" src="https://via.placeholder.com/300x200?text=تقارير+المخزون" /> </p>
-🤝 كيفية المساهمة
-نرحب بمساهماتكم في تطوير النظام عبر:
+### 3. CustomerManager.cs
+```csharp
+public class CustomerManager {
+    public void AddCustomer(Customer customer) {
+        // إضافة عميل جديد
+    }
+    
+    public List<Customer> SearchCustomers(string keyword) {
+        // بحث العملاء
+    }
+    
+    public decimal GetCustomerBalance(int customerId) {
+        // حساب رصيد العميل
+    }
+}
+```
 
-<ul> <li>الإبلاغ عن الأخطاء</li> <li>اقتراح تحسينات</li> <li>تطوير ميزات جديدة</li> <li>تحسين الوثائق</li> </ul>
-📞 تواصل معنا
-<p> <a href="https://github.com/yourusername" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> <a href="https://twitter.com/yourusername" target="_blank"><img alt="Twitter" src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a> <a href="https://www.linkedin.com/in/yourusername" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a> </p>
+### 4. ReportManager.cs
+```csharp
+public class ReportManager {
+    public SalesReport GenerateSalesReport(DateTime period) {
+        // توليد تقرير المبيعات
+    }
+    
+    public InventoryReport GenerateInventoryReport() {
+        // تقرير المخزون
+    }
+}
+```
+
+## 🔄 كيفية عمل الطبقات معاً
+
+1. **واجهة المستخدم (PL)** تستدعي دوال من **BL**
+2. **BL** تقوم بـ:
+   - تطبيق قواعد العمل
+   - التحقق من الصلاحيات
+   - معالجة البيانات
+3. **BL** تستخدم **DAL** للوصول للبيانات
+4. النتائج تعود عبر الطبقات بنفس الترتيب
+
+## 📌 فوائد هذا التصميم
+
+- فصل واضح للمسؤوليات
+- سهولة الصيانة والتطوير
+- إمكانية إعادة استخدام الكود
+- اختبار كل طبقة بشكل منفصل
+
+## 💻 التقنيات المستخدمة
+<p>
+  <img alt=".NET" src="https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+  <img alt="C#" src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" />
+  <img alt="SQL Server" src="https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" />
+</p>
