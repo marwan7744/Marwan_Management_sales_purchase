@@ -1,6 +1,8 @@
 نظام إدارة المبيعات والمشتريات - Marwan Management
 <h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> مرحباً! أنا مروان</h1><p>مرحباً بكم في صفحة نظام إدارة المبيعات والمشتريات! </br> أنا <b>مروان</b>، مطور نظم إدارة من <b>الجمهورية اليمنية</b>. </p>
 🏗️ بنية النظام المعمارية
+
+
 يعتمد النظام على التصميم متعدد الطبقات (Multi-Layer Architecture):
 
 🔹 DAL (Data Access Layer)
@@ -19,6 +21,8 @@
 نظام التقارير
 
 📂 شرح طبقة BL (Business Logic Layer)
+
+
 تحتوي طبقة منطق الأعمال على الكلاسات الرئيسية التالية:
 
 1. SalesManager.cs
@@ -78,6 +82,7 @@ public class ReportManager {
     }
 }
 🔄 كيفية عمل الطبقات معاً
+
 واجهة المستخدم (PL) تستدعي دوال من BL
 
 BL تقوم بـ:
@@ -93,6 +98,7 @@ BL تستخدم DAL للوصول للبيانات
 النتائج تعود عبر الطبقات بنفس الترتيب
 
 📌 فوائد هذا التصميم
+
 فصل واضح للمسؤوليات
 
 سهولة الصيانة والتطوير
@@ -102,9 +108,13 @@ BL تستخدم DAL للوصول للبيانات
 اختبار كل طبقة بشكل منفصل
 
 💻 التقنيات المستخدمة
+
+
 <p> <img alt=".NET" src="https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img alt="C#" src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" /> <img alt="SQL Server" src="https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" /> </p>
 نظام إدارة المبيعات والمشتريات - Marwan Management
+
 📂 طبقة BL (Business Logic Layer)
+
 تحتوي على الكلاسات الأساسية للنظام:
 
 SalesManager.cs لإدارة المبيعات والفواتير
@@ -116,6 +126,8 @@ CustomerManager.cs لإدارة العملاء
 ReportManager.cs لتوليد التقارير
 
 📊 طبقة RPT (التقارير)
+
+
 csharp
 public class ReportGenerator
 {
@@ -133,6 +145,8 @@ public class ReportGenerator
     }
 }
 🗃️ طبقة DAL (Data Access Layer)
+
+
 csharp
 public class DatabaseManager
 {
@@ -168,6 +182,8 @@ public class DatabaseManager
     }
 }
 🔄 مثال للتفاعل بين الطبقات
+
+
 csharp
 // في واجهة المستخدم (PL)
 var salesManager = new SalesManager();
